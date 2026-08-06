@@ -1,0 +1,5 @@
+<template>
+    <div class="logo">
+        <img src="../assets/logo.png" />
+    </div>
+</template>
