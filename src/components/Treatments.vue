@@ -1,6 +1,6 @@
 <template>
     <Section>
-        <SectionTitle>Como posso te ajudar</SectionTitle>
+        <SectionTitle>Tratamentos</SectionTitle>
         <ul>
             <Card title="Dores na coluna" description="Alívio, mobilidade e orientação para sua rotina.">
                 <template #icon>
@@ -37,13 +37,11 @@ section {
 
         .card {
             .card__icon {
-                margin-bottom: 5px;
-            }
-
-            svg {
-                width: 25px;
-                height: 25px;
-                color: #681F24;
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    color: #681F24;
+                }
             }
         }
     }

@@ -7,5 +7,6 @@
         font-size: 1.5rem;
         color: #681f24;
         margin-bottom: 20px;
+        font-weight: 500;
     }
 </style>
