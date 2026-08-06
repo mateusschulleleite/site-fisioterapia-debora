@@ -33,7 +33,7 @@ function toggleMenu() {
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 header  {
     border-bottom: 1px solid #8E2027;
     padding: 10px 20px;

@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .home {
     position: relative;
     overflow: hidden;
