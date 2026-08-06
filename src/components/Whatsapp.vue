@@ -9,5 +9,6 @@
         bottom: 5px;
         right: 5px;
         width: 60px;
+        z-index: 10;
     }
 </style>

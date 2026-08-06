@@ -27,15 +27,17 @@
         display: flex;
         gap: 10px;
 
-        h4 {
-            font-size: 1rem;
-            color: #681f24;
-        }
+        .card__content {
+            h4 {
+                font-size: 1rem;
+                color: #681f24;
+            }
 
-        p {
-            margin-top: 5px;
-            font-size: 0.85rem;
-            color: #4a1619;
+            p {
+                margin-top: 5px;
+                font-size: 0.85rem;
+                color: #4a1619;
+            }
         }
     }
 </style>
