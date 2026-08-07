@@ -109,6 +109,10 @@ header {
             font-size: 0.85rem;
             font-weight: 600;
 
+            li {
+                cursor: pointer;
+            }
+
             li:last-child {
                 width: fit-content;
                 padding: 10px;
