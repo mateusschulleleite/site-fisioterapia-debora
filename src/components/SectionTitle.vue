@@ -9,4 +9,10 @@
         margin-bottom: 20px;
         font-weight: 500;
     }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 1.7rem;
+        }
+    }
 </style>

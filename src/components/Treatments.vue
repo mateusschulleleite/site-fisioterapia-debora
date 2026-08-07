@@ -45,5 +45,17 @@ section {
             }
         }
     }
+
+    @media (min-width: 1024px) {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            flex-direction: row;
+
+            .card {
+                flex-direction: column;
+            }
+        }
+    }
 }
 </style>

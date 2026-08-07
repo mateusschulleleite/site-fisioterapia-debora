@@ -108,6 +108,10 @@
             p {
                 font-size: 1.2rem;
             }
+
+            button {
+                width: fit-content;
+            }
         }
     }
 
@@ -124,11 +128,6 @@
                 font-size: 1rem;
                 width: 360px;
             }
-
-            button {
-                width: fit-content;
-            }
-
         }
     }
 
