@@ -2,7 +2,20 @@
     <Section>
         <SectionTitle>Avaliações de Pacientes</SectionTitle>
 
-        <Carousel :items-to-show="1" :wrap-around="true" :autoplay="5000">
+        <Carousel :items-to-show="1" :wrap-around="true" :autoplay="5000" :breakpoints="{
+            1024: {
+                itemsToShow: 3,
+                gap: 24
+            },
+            1200: {
+                itemsToShow: 4,
+                gap: 30
+            },
+            1400: {
+                itemsToShow: 5,
+                gap: 30
+            }
+        }">
             <Slide>
                 <Card title="Mariana Souza"
                     description="Cheguei com muita dor na lombar e dificuldade para trabalhar sentada. O atendimento foi cuidadoso, o plano fez sentido para minha rotina e senti melhora já nas primeiras semanas." />
@@ -70,17 +83,17 @@ import SectionTitle from './SectionTitle.vue'
 </script>
 
 <style scoped lang="scss">
-    section {
-        background: #6D272B;
+section {
+    background: #6D272B;
 
-        h2 {
-            color: #FFFFFF;
-        }
+    h2 {
+        color: #FFFFFF;
+    }
 
-        .card {
-            :deep(.card__content h4) {
-                font-size: 1.2rem;
-            }
+    .card {
+        :deep(.card__content h4) {
+            font-size: 1.2rem;
         }
     }
+}
 </style>
