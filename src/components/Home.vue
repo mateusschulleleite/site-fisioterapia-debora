@@ -3,8 +3,16 @@
         <div class="home__content">
             <span>FISIOTERAPIA INTEGRADA</span>
             <h2>Movimento com segurança e cuidado.</h2>
-            <p>Atendimento individual para dor, reabilitação e prevenção, com plano criado para você.</p>
-            <button>Agendar pelo Whatsapp</button>
+            <p>
+                Atendimento individual para dor, reabilitação e prevenção, com plano criado para
+                você.
+            </p>
+            <a
+                target="blank"
+                href="https://wa.me/5548998276518?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20fisioterapia."
+            >
+                Agendar pelo Whatsapp
+            </a>
         </div>
     </div>
 </template>
@@ -25,10 +33,12 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(90deg,
-                #fbf7f2 0%,     
-                rgba(251, 247, 242, 0.86) 40%,
-                rgba(251, 247, 242, 0) 100%);
+        background: linear-gradient(
+            90deg,
+            #fbf7f2 0%,
+            rgba(251, 247, 242, 0.86) 40%,
+            rgba(251, 247, 242, 0) 100%
+        );
     }
 
     .home__content {
@@ -70,7 +80,7 @@
             font-family: "Montserrat", sans-serif !important;
         }
 
-        button {
+        a {
             background-color: #681f24;
             font-family: "Montserrat", sans-serif !important;
             font-weight: 600;
@@ -80,7 +90,15 @@
             border-radius: 4px;
             border: none;
             box-shadow: 0px 0px 10px 1px #681f2437;
-            width: 100%;
+            transition: 300ms all;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 0.8rem;
+
+            &:hover {
+                box-shadow: none;
+                transform: scale(0.95);
+            }
         }
     }
 
@@ -90,13 +108,14 @@
         background-position: 100% 12%;
         background-size: cover;
 
-
         &::before {
             content: "";
-            background: linear-gradient(90deg,
-                    #fbf7f2 0%,
-                    rgba(251, 247, 242, 0.86) 40%,
-                    rgba(251, 247, 242, 0) 100%);
+            background: linear-gradient(
+                90deg,
+                #fbf7f2 0%,
+                rgba(251, 247, 242, 0.86) 40%,
+                rgba(251, 247, 242, 0) 100%
+            );
         }
 
         .home__content {
@@ -110,8 +129,8 @@
                 font-size: 1.2rem;
             }
 
-            button {
-                width: fit-content;
+            a {
+                font-size: 1rem;
             }
         }
     }
@@ -147,11 +166,6 @@
                 font-size: 1.2rem;
                 width: 500px;
             }
-
-            button {
-                width: fit-content;
-            }
-
         }
     }
 
