@@ -1,39 +1,34 @@
 <template>
-  <header>
-    <Logo :scrolled="headerScrolled" />
+    <header>
+        <Logo :scrolled="headerScrolled" />
 
-    <div class="header__title">
-      <h1>Dra. Débora Fratoni</h1>
-      <span>FISIOTERAPIA INTEGRADA</span>
-    </div>
+        <div class="header__title">
+            <h1>Dra. Débora Fratoni</h1>
+            <span>FISIOTERAPIA INTEGRADA</span>
+        </div>
 
-    <nav class="header__menu" :class="{ 'header__menu--open': menuToggle }">
-      <ul>
-        <li @click="scrollToSection('home')">Home</li>
-        <li @click="scrollToSection('treatments')">Tratamentos</li>
-        <li @click="scrollToSection('methods')">Método</li>
-        <li @click="scrollToSection('reviews')">Avaliações</li>
-        <li>
-          <a
-            target="_blank"
-            href="https://wa.me/5548998276518?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20fisioterapia."
-          >
-            Agendar Avaliação
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <nav class="header__menu" :class="{ 'header__menu--open': menuToggle }">
+            <ul>
+                <li @click="scrollToSection('home')">Home</li>
+                <li @click="scrollToSection('treatments')">Tratamentos</li>
+                <li @click="scrollToSection('methods')">Método</li>
+                <li @click="scrollToSection('reviews')">Avaliações</li>
+                <li>
+                    <a
+                        target="_blank"
+                        href="https://wa.me/5548998276518?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20fisioterapia."
+                    >
+                        Agendar Avaliação
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-    <button
-      class="header__icon"
-      type="button"
-      aria-label="Abrir menu"
-      @click="toggleMenu"
-    >
-      <Bars3Icon v-if="!menuToggle" />
-      <XMarkIcon v-else />
-    </button>
-  </header>
+        <button class="header__icon" type="button" aria-label="Abrir menu" @click="toggleMenu">
+            <Bars3Icon v-if="!menuToggle" />
+            <XMarkIcon v-else />
+        </button>
+    </header>
 </template>
 
 <script setup>
@@ -44,194 +39,193 @@ import Logo from "./Logo.vue";
 const menuToggle = ref(false);
 
 function toggleMenu() {
-  menuToggle.value = !menuToggle.value;
+    menuToggle.value = !menuToggle.value;
 }
 
 const headerScrolled = ref(false);
 
 function handleScroll() {
-  headerScrolled.value = window.scrollY > 50;
+    headerScrolled.value = window.scrollY > 50;
 }
 
 window.addEventListener("scroll", handleScroll);
 
 function scrollToSection(section) {
-  menuToggle.value = false;
+    menuToggle.value = false;
 
-  const element = document.querySelector(`.${section}`);
+    const element = document.querySelector(`.${section}`);
 
-  if (element) {
-    window.scrollTo({
-      top: element.offsetTop - 80,
-      behavior: "smooth",
-    });
-  }
+    if (element) {
+        window.scrollTo({
+            top: element.offsetTop - 80,
+            behavior: "smooth",
+        });
+    }
 }
 </script>
 
 <style scoped lang="scss">
 header {
-  position: fixed;
-  top: 0;
-  z-index: 3;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #8e2027;
-  background-color: #fbf7f2;
-
-  .logo {
-    max-width: 65px;
-  }
-
-  .header__title {
-    max-width: 150px;
-    margin-left: 10px;
-
-    h1 {
-      color: #681f24;
-      font-size: 1.1rem;
-      line-height: 18px;
-    }
-
-    span {
-      display: none;
-    }
-  }
-
-  .header__menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 2;
+    position: fixed;
+    top: 0;
+    z-index: 3;
     width: 100%;
-    padding: 5px;
-
-    &--open {
-      display: block;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: #fbf7f2;
-      box-shadow: 0 0 10px 1px #681f2437;
-      color: #681f24;
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-
-      li {
-        cursor: pointer;
-        transition: 400ms all;
-        padding: 10px;
-        border-radius: 4px;
-
-        &:hover {
-          background-color: #681f24;
-          box-shadow: none;
-          color: #fbf7f2;
-        }
-      }
-
-      li:last-child {
-        width: fit-content;
-        background-color: #681f24;
-        box-shadow: 0 0 10px 1px #681f2437;
-
-        &:hover {
-          background-color: #fbf7f2;
-          box-shadow: none;
-
-          a {
-            color: #681f24;
-          }
-        }
-      }
-    }
-  }
-
-  .header__icon {
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: #681f24;
-    cursor: pointer;
-
-    svg {
-      width: 30px;
-      height: 30px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    padding: 10px 50px;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #8e2027;
+    background-color: #fbf7f2;
 
     .logo {
-      max-width: 100px;
+        max-width: 65px;
     }
 
     .header__title {
-      max-width: 400px;
-      margin-left: 20px;
+        max-width: 150px;
+        margin-left: 10px;
 
-      h1 {
-        font-size: 1.3rem;
-      }
+        h1 {
+            color: #681f24;
+            font-size: 1.1rem;
+            line-height: 18px;
+        }
 
-      span {
-        display: inline-block;
-        margin-top: 7px;
-        color: #4a1619;
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.7rem;
-        font-weight: 300;
-      }
+        span {
+            display: none;
+        }
     }
 
     .header__menu {
-      display: block;
-      position: static;
-      width: auto;
-      margin-left: auto;
-      padding: 0;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        padding: 5px;
 
-      ul {
-        flex-direction: row;
-        align-items: center;
-        padding: 0;
-        background: transparent;
-        box-shadow: none;
-        gap: 20px;
-      }
+        &--open {
+            display: block;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fbf7f2;
+            box-shadow: 0 0 10px 1px #681f2437;
+            color: #681f24;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+
+            li {
+                cursor: pointer;
+                transition: 400ms all;
+                padding: 10px;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: #681f24;
+                    box-shadow: none;
+                    color: #fbf7f2;
+                }
+            }
+
+            li:last-child {
+                width: fit-content;
+                background-color: #681f24;
+                box-shadow: 0 0 10px 1px #681f2437;
+
+                &:hover {
+                    background-color: #fbf7f2;
+                    box-shadow: none;
+
+                    a {
+                        color: #681f24;
+                    }
+                }
+            }
+        }
     }
 
     .header__icon {
-      display: none;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        padding: 0;
+        border: none;
+        background: transparent;
+        color: #681f24;
+        cursor: pointer;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
     }
-  }
 
-  @media (min-width: 1200px) {
-    padding: 5px 70px;
-  }
+    @media (min-width: 1024px) {
+        padding: 10px 50px;
 
-  @media (min-width: 1400px) {
-    padding: 5px 100px;
-  }
+        .logo {
+            max-width: 100px;
+        }
 
-  @media (min-width: 1600px) {
-    padding: 5px 150px;
-  }
+        .header__title {
+            max-width: 400px;
+            margin-left: 20px;
 
-  @media (min-width: 1920px) {
-    padding: 5px 250px;
-  }
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            span {
+                display: inline-block;
+                margin-top: 7px;
+                color: #4a1619;
+                font-family: "Montserrat", sans-serif;
+                font-size: 0.7rem;
+                font-weight: 300;
+            }
+        }
+
+        .header__menu {
+            display: block;
+            position: static;
+            width: auto;
+            margin-left: auto;
+            padding: 0;
+
+            ul {
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+                background: transparent;
+                box-shadow: none;
+            }
+        }
+
+        .header__icon {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        padding: 5px 70px;
+    }
+
+    @media (min-width: 1400px) {
+        padding: 5px 100px;
+    }
+
+    @media (min-width: 1600px) {
+        padding: 5px 150px;
+    }
+
+    @media (min-width: 1920px) {
+        padding: 5px 250px;
+    }
 }
 </style>
