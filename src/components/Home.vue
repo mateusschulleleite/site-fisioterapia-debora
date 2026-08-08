@@ -10,6 +10,7 @@
             <a
                 target="blank"
                 href="https://wa.me/5548998276518?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20fisioterapia."
+                aria-label="Entrar em contato pelo WhatsApp"
             >
                 Agendar pelo Whatsapp
             </a>

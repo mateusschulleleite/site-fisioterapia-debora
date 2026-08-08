@@ -1,6 +1,6 @@
 <template>
     <div class="logo" :class="{ 'logo--scrolled': scrolled }">
-        <img src="../assets/logo.png" />
+        <img alt="Logo da fisioterapeuta" src="../assets/logo.png" />
     </div>
 </template>
 
@@ -8,9 +8,9 @@
 defineProps({
     scrolled: {
         type: Boolean,
-        default: false
-    }
-})
+        default: false,
+    },
+});
 </script>
 
 <style scoped lang="scss">

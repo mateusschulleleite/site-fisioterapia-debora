@@ -20,6 +20,7 @@
         <div class="developer">
             Desenvolvido por
             <a
+                aria-label="Entrar em contato pelo WhatsApp"
                 target="blank"
                 href="https://api.whatsapp.com/send/?phone=5547920028614&text=Ol%C3%A1+Mateus%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+servi%C3%A7os.&type=phone_number&app_absent=0"
                 >Mateus Schulle Leite</a

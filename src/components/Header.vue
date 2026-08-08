@@ -9,12 +9,13 @@
 
         <nav class="header__menu" :class="{ 'header__menu--open': menuToggle }">
             <ul>
-                <li @click="scrollToSection('home')">Home</li>
-                <li @click="scrollToSection('treatments')">Tratamentos</li>
-                <li @click="scrollToSection('methods')">Método</li>
-                <li @click="scrollToSection('reviews')">Avaliações</li>
+                <li title="Home" @click="scrollToSection('home')">Home</li>
+                <li title="Tratamentos" @click="scrollToSection('treatments')">Tratamentos</li>
+                <li title="Método" @click="scrollToSection('methods')">Método</li>
+                <li title="Avaliações" @click="scrollToSection('reviews')">Avaliações</li>
                 <li>
                     <a
+                        aria-label="Entrar em contato pelo WhatsApp"
                         target="_blank"
                         href="https://wa.me/5548998276518?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20fisioterapia."
                     >
