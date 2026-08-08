@@ -17,7 +17,14 @@
                 </li>
             </ul>
         </div>
-        <div class="developer">Desenvolvido por <b>Mateus Schulle Leite</b></div>
+        <div class="developer">
+            Desenvolvido por
+            <a
+                target="blank"
+                href="https://api.whatsapp.com/send/?phone=5547920028614&text=Ol%C3%A1+Mateus%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+servi%C3%A7os.&type=phone_number&app_absent=0"
+                >Mateus Schulle Leite</a
+            >
+        </div>
     </Section>
 </template>
 
@@ -91,8 +98,9 @@ section {
         border-top: #681f24 solid 1px;
         padding-top: 10px;
 
-        b {
+        a {
             font-weight: 700;
+            color: #681f24;
         }
     }
 
