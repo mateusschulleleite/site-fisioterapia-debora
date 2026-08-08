@@ -11,33 +11,39 @@
 </template>
 
 <script setup lang="js">
-    const props = defineProps({
-        title: String,
-        description: Number
-    })
+const props = defineProps({
+    title: String,
+    description: Number,
+});
 </script>
 
 <style lang="scss" scoped>
-    .card {
-        background: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        border: solid 1px #e9dedb;
-        font-family: "Montserrat", sans-serif !important;
-        display: flex;
-        gap: 10px;
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 1px #e9dedb;
+    font-family: "Montserrat", sans-serif !important;
+    display: flex;
+    gap: 10px;
+    transition: 300ms all;
 
-        .card__content {
-            h4 {
-                font-size: 1rem;
-                color: #681f24;
-            }
+    &:hover {
+        border: solid 1px #681f24;
+        transform: scale(1.01);
+    }
 
-            p {
-                margin-top: 5px;
-                font-size: 0.85rem;
-                color: #4a1619;
-            }
+    .card__content {
+        h4 {
+            font-size: 1rem;
+            color: #681f24;
+        }
+
+        p {
+            margin-top: 5px;
+            font-size: 0.85rem;
+            color: #4a1619;
         }
     }
+}
 </style>
