@@ -37,7 +37,11 @@ import SectionTitle from './SectionTitle.vue';
 section {
     background: #ffffff;
 
-    >div {
+    > div {
+        > div {
+            display: none;
+        }
+        
         ul {
             display: flex;
             flex-direction: column;

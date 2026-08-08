@@ -62,5 +62,13 @@ section {
             font-weight: 700;
         }
     }
+
+    @media (min-width: 1024px) {
+        ul {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 </style>
