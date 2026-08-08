@@ -7,25 +7,22 @@
             <span>FISIOTERAPIA INTEGRADA</span>
         </div>
 
-        <nav
-            class="header__menu"
-            :class="{ 'header__menu--open': menuToggle }"
-        >
+        <nav class="header__menu" :class="{ 'header__menu--open': menuToggle }">
             <ul>
                 <li>Home</li>
                 <li>Sobre</li>
                 <li>Tratamentos</li>
                 <li>Método</li>
-                <li>Agendar Avaliação</li>
+                <li>
+                    <a target="blank"
+                        href="https://wa.me/5548998276518?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20fisioterapia.">
+                        Agendar Avaliação
+                    </a>
+                </li>
             </ul>
         </nav>
 
-        <button
-            class="header__icon"
-            type="button"
-            aria-label="Abrir menu"
-            @click="toggleMenu"
-        >
+        <button class="header__icon" type="button" aria-label="Abrir menu" @click="toggleMenu">
             <Bars3Icon v-if="!menuToggle" />
             <XMarkIcon v-else />
         </button>
@@ -33,23 +30,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/16/solid'
-import Logo from './Logo.vue'
+import { ref } from "vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/16/solid";
+import Logo from "./Logo.vue";
 
-const menuToggle = ref(false)
+const menuToggle = ref(false);
 
 function toggleMenu() {
-    menuToggle.value = !menuToggle.value
+    menuToggle.value = !menuToggle.value;
 }
 
-const headerScrolled = ref(false)
+const headerScrolled = ref(false);
 
 function handleScroll() {
-    headerScrolled.value = window.scrollY > 50
+    headerScrolled.value = window.scrollY > 50;
 }
 
-window.addEventListener('scroll', handleScroll)
+window.addEventListener("scroll", handleScroll);
 </script>
 
 <style scoped lang="scss">
@@ -99,7 +96,6 @@ header {
         ul {
             display: flex;
             flex-direction: column;
-            gap: 13px;
             padding: 15px;
             border-radius: 8px;
             background-color: #fbf7f2;
@@ -111,15 +107,30 @@ header {
 
             li {
                 cursor: pointer;
+                transition: 400ms all;
+                padding: 10px;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: #681f24;
+                    box-shadow: none;
+                    color: #fbf7f2;
+                }
             }
 
             li:last-child {
                 width: fit-content;
-                padding: 10px;
-                border-radius: 4px;
                 background-color: #681f24;
                 box-shadow: 0 0 10px 1px #681f2437;
-                color: #fbf7f2;
+
+                &:hover {
+                    background-color: #fbf7f2;
+                    box-shadow: none;
+
+                    a {
+                        color: #681f24;
+                    }
+                }
             }
         }
     }
@@ -189,7 +200,6 @@ header {
 
     @media (min-width: 1200px) {
         padding: 5px 70px;
-
     }
 
     @media (min-width: 1400px) {
