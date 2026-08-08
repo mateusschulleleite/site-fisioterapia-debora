@@ -1,5 +1,5 @@
 <template>
-    <Section>
+    <Section class="treatments">
         <SectionTitle>Tratamentos</SectionTitle>
         <ul>
             <Card title="Dores na coluna" description="Alívio, mobilidade e orientação para sua rotina.">

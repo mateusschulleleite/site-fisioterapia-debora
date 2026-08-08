@@ -1,5 +1,5 @@
 <template>
-    <Section>
+    <Section class="methods">
         <SectionTitle>Métodos de Cuidado</SectionTitle>
         <div>
             <div>

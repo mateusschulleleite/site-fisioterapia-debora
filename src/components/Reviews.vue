@@ -1,5 +1,5 @@
 <template>
-    <Section>
+    <Section class="reviews">
         <SectionTitle>Avaliações de Pacientes</SectionTitle>
 
         <Carousel :items-to-show="1" :wrap-around="true" :autoplay="5000" :breakpoints="{
