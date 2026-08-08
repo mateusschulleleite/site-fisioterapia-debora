@@ -186,5 +186,18 @@ header {
             display: none;
         }
     }
+
+    @media (min-width: 1200px) {
+        padding: 5px 70px;
+
+    }
+
+    @media (min-width: 1400px) {
+        padding: 5px 100px;
+    }
+
+    @media (min-width: 1600px) {
+        padding: 5px 150px;
+    }
 }
 </style>

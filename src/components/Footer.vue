@@ -55,6 +55,8 @@ section {
         text-align: center;
         font-weight: 300;
         color: #681F24;
+        border-top: #681F24 solid 1px;
+        padding-top: 10px;
 
         b {
             font-weight: 700;

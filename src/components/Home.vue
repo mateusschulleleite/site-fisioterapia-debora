@@ -11,6 +11,7 @@
 
 <style scoped lang="scss">
 .home {
+    margin-top: 76px;
     position: relative;
     overflow: hidden;
     background-color: #fbf7f2;
@@ -25,7 +26,7 @@
         position: absolute;
         inset: 0;
         background: linear-gradient(90deg,
-                rgba(40, 37, 33, 0.96) 0%,
+                #fbf7f2 0%,     
                 rgba(251, 247, 242, 0.86) 40%,
                 rgba(251, 247, 242, 0) 100%);
     }
@@ -116,8 +117,8 @@
     }
 
     @media (min-width: 1200px) {
-        margin-top: 101px;
-        padding: 60px 50px 150px;
+        margin-top: 91px;
+        padding: 60px 70px 150px;
 
         .home__content {
             h2 {
@@ -132,7 +133,7 @@
     }
 
     @media (min-width: 1400px) {
-        margin-top: 101px;
+        margin-top: 91px;
         padding: 60px 100px 150px;
 
         .home__content {
@@ -152,6 +153,10 @@
             }
 
         }
+    }
+
+    @media (min-width: 1600px) {
+        padding: 60px 150px 150px;
     }
 }
 </style>
