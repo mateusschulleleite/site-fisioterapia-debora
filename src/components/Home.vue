@@ -158,5 +158,9 @@
     @media (min-width: 1600px) {
         padding: 60px 150px 150px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 60px 250px 150px;
+    }
 }
 </style>

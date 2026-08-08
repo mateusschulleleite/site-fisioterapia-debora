@@ -26,5 +26,9 @@ section {
     @media (min-width: 1600px) {
         padding: 25px 150px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 25px 250px;
+    }
 }
 </style>

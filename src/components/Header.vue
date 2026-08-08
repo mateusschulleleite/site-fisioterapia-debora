@@ -199,5 +199,9 @@ header {
     @media (min-width: 1600px) {
         padding: 5px 150px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 5px 250px;
+    }
 }
 </style>
