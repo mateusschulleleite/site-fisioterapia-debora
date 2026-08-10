@@ -1,22 +1,31 @@
 <template>
     <section>
-        <slot></slot>
+        <motion.div
+            :initial="{ opacity: 0, y: 60 }"
+            :while-in-view="{ opacity: 1, y: 0 }"
+            :viewport="{ once: true }"
+            :transition="{ duration: 0.6 }"
+        >
+            <slot></slot>
+        </motion.div>
     </section>
 </template>
+
+<script setup>
+import { motion } from "motion-v";
+</script>
 
 <style lang="scss" scoped>
 section {
     padding: 25px 20px;
-    background: #FBF7F3;
+    background: #fbf7f3;
 
     @media (min-width: 1024px) {
         padding: 25px 50px;
-
     }
 
     @media (min-width: 1200px) {
         padding: 25px 70px;
-
     }
 
     @media (min-width: 1400px) {
