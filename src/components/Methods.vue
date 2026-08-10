@@ -2,12 +2,15 @@
     <Section class="methods">
         <SectionTitle>Métodos de Cuidado</SectionTitle>
         <div>
-            <div>
+            <div class="methods__description">
                 <span>MÉTODOS DE CUIDADO</span>
                 <h3>Uma experiência clara desde a primeira consulta.</h3>
             </div>
             <ul>
-                <Card title="Avaliação completa" description="Entendimento da dor, rotina e objetivos.">
+                <Card
+                    title="Avaliação completa"
+                    description="Entendimento da dor, rotina e objetivos."
+                >
                     <template #icon>
                         <span>01</span>
                     </template>
@@ -17,7 +20,10 @@
                         <span>02</span>
                     </template>
                 </Card>
-                <Card title="Acompanhamento" description="Ajustes frequentes para ganhar função com segurança.">
+                <Card
+                    title="Acompanhamento"
+                    description="Ajustes frequentes para ganhar função com segurança."
+                >
                     <template #icon>
                         <span>03</span>
                     </template>
@@ -28,9 +34,9 @@
 </template>
 
 <script setup lang="js">
-import Card from './Card.vue';
-import Section from './Section.vue';
-import SectionTitle from './SectionTitle.vue';
+import Card from "./Card.vue";
+import Section from "./Section.vue";
+import SectionTitle from "./SectionTitle.vue";
 </script>
 
 <style scoped lang="scss">
@@ -38,22 +44,22 @@ section {
     background: #ffffff;
 
     > div {
-        > div {
+        .methods__description {
             display: none;
         }
-        
+
         ul {
             display: flex;
             flex-direction: column;
             gap: 15px;
 
             .card {
-                background: #FBF7F2;
+                background: #fbf7f2;
 
                 .card__icon {
                     span {
-                        background-color: #681F24;
-                        color: #FBF7F2;
+                        background-color: #681f24;
+                        color: #fbf7f2;
                         width: 30px;
                         height: 30px;
                         border-radius: 50%;
@@ -99,7 +105,7 @@ section {
             }
 
             h3 {
-                color: #681F24;
+                color: #681f24;
                 font-weight: 400;
             }
 
@@ -109,12 +115,12 @@ section {
                 gap: 15px;
 
                 .card {
-                    background: #FBF7F2;
+                    background: #fbf7f2;
 
                     .card__icon {
                         span {
-                            background-color: #681F24;
-                            color: #FBF7F2;
+                            background-color: #681f24;
+                            color: #fbf7f2;
                             width: 30px;
                             height: 30px;
                             border-radius: 50%;
