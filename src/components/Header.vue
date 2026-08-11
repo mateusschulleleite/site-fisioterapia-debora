@@ -35,6 +35,7 @@
 <script setup>
 import { ref } from "vue";
 import Logo from "./Logo.vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/16/solid";
 
 const menuToggle = ref(false);
 
