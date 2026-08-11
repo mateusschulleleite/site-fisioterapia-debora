@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="header" :class="{ 'header--scrolled': headerScrolled }">
         <Logo :scrolled="headerScrolled" />
 
         <div class="header__title">
@@ -34,7 +34,6 @@
 
 <script setup>
 import { ref } from "vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/16/solid";
 import Logo from "./Logo.vue";
 
 const menuToggle = ref(false);
@@ -66,7 +65,7 @@ function scrollToSection(section) {
 </script>
 
 <style scoped lang="scss">
-header {
+.header {
     position: fixed;
     top: 0;
     z-index: 3;
@@ -74,8 +73,12 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid #8e2027;
-    background-color: #fbf7f2;
+    background-color: transparent;
+    transition: 300ms all;
+
+    &--scrolled {
+        background-color: #fbf7f2 !important;
+    }
 
     .logo {
         max-width: 65px;

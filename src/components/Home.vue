@@ -20,15 +20,14 @@
 
 <style scoped lang="scss">
 .home {
-    margin-top: 76px;
     position: relative;
     overflow: hidden;
     background-color: #fbf7f2;
-    padding: 45px 20px 35px;
+    padding: 120px 20px 35px;
     background-image: url("../assets/home.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% center;
+    background-position: 60% center;
 
     &::before {
         content: "";
@@ -104,8 +103,7 @@
     }
 
     @media (min-width: 1024px) {
-        margin-top: 101px;
-        padding: 45px 50px 150px;
+        padding: 150px 50px 150px;
         background-position: 100% 12%;
         background-size: cover;
 
@@ -137,8 +135,7 @@
     }
 
     @media (min-width: 1200px) {
-        margin-top: 91px;
-        padding: 60px 70px 150px;
+        padding: 150px 70px 150px;
 
         .home__content {
             h2 {
@@ -153,8 +150,7 @@
     }
 
     @media (min-width: 1400px) {
-        margin-top: 91px;
-        padding: 60px 100px 150px;
+        padding: 150px 100px 150px;
 
         .home__content {
             max-width: 600px;
@@ -171,11 +167,11 @@
     }
 
     @media (min-width: 1600px) {
-        padding: 60px 150px 150px;
+        padding: 150px 150px 150px;
     }
 
     @media (min-width: 1920px) {
-        padding: 60px 250px 150px;
+        padding: 150px 250px 200px;
     }
 }
 </style>
