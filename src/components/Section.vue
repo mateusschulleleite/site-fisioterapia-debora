@@ -1,6 +1,7 @@
 <template>
     <section>
         <motion.div
+            :class="contentClass"
             :initial="{ opacity: 0, y: 60 }"
             :while-in-view="{ opacity: 1, y: 0 }"
             :viewport="{ once: true }"
@@ -13,6 +14,10 @@
 
 <script setup>
 import { motion } from "motion-v";
+
+defineProps({
+    contentClass: String,
+});
 </script>
 
 <style lang="scss" scoped>

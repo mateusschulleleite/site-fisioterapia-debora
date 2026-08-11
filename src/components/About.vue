@@ -1,35 +1,7 @@
 <template>
-    <Section class="methods">
-        <SectionTitle>Métodos de Cuidado</SectionTitle>
-        <div>
-            <div class="methods__description">
-                <span>MÉTODOS DE CUIDADO</span>
-                <h3>Uma experiência clara desde a primeira consulta.</h3>
-            </div>
-            <ul>
-                <Card
-                    title="Avaliação completa"
-                    description="Entendimento da dor, rotina e objetivos."
-                >
-                    <template #icon>
-                        <span>01</span>
-                    </template>
-                </Card>
-                <Card title="Plano" description="Conduta individualizada e explicada com clareza.">
-                    <template #icon>
-                        <span>02</span>
-                    </template>
-                </Card>
-                <Card
-                    title="Acompanhamento"
-                    description="Ajustes frequentes para ganhar função com segurança."
-                >
-                    <template #icon>
-                        <span>03</span>
-                    </template>
-                </Card>
-            </ul>
-        </div>
+    <Section class="about">
+        <SectionTitle>Sobre mim</SectionTitle>
+        
     </Section>
 </template>
 
